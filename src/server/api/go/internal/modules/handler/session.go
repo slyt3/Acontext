@@ -674,18 +674,17 @@ func (h *SessionHandler) GetTokenCounts(c *gin.Context) {
 	}})
 }
 
-// GetSessionObservingStatus handles GET /api/v1/session/:session_id/observing-status
+// GetSessionObservingStatus godoc
 //
-// @Summary Get message observing status for a session
-// @Description Returns the count of observed, in_process, and pending messages
-// @Tags sessions
-// @Accept json
-// @Produce json
-// @Param session_id path string true "Session ID" format(uuid)
-// @Success 200 {object} model.MessageObservingStatus
-// @Failure 400 {object} map[string]string
-// @Failure 500 {object} map[string]string
-// @Router /api/v1/session/{session_id}/observing-status [get]
+//	@Summary		Get message observing status for a session
+//	@Description	Returns the count of observed, in_process, and pending messages
+//	@Tags			session
+//	@Accept			json
+//	@Produce		json
+//	@Param			session_id	path	string	true	"Session ID"	format(uuid)
+//	@Security		BearerAuth
+//	@Success		200	{object}	serializer.Response{data=model.MessageObservingStatus}
+//	@Router			/session/{session_id}/observing-status [get]
 func (h *SessionHandler) GetSessionObservingStatus(c *gin.Context) {
 	sessionID := c.Param("session_id")
 

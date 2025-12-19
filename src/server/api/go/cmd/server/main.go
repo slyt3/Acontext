@@ -92,16 +92,16 @@ func main() {
 	toolHandler := do.MustInvoke[*handler.ToolHandler](inj)
 
 	engine := router.NewRouter(router.RouterDeps{
-		Config:                  cfg,
-		DB:                      db,
-		Log:                     log,
-		SpaceHandler:            spaceHandler,
-		BlockHandler:            blockHandler,
-		SessionHandler:          sessionHandler,
-		DiskHandler:             diskHandler,
-		ArtifactHandler:         artifactHandler,
-		TaskHandler:             taskHandler,
-		ToolHandler:             toolHandler,
+		Config:          cfg,
+		DB:              db,
+		Log:             log,
+		SpaceHandler:    spaceHandler,
+		BlockHandler:    blockHandler,
+		SessionHandler:  sessionHandler,
+		DiskHandler:     diskHandler,
+		ArtifactHandler: artifactHandler,
+		TaskHandler:     taskHandler,
+		ToolHandler:     toolHandler,
 	})
 
 	addr := fmt.Sprintf("%s:%d", cfg.App.Host, cfg.App.Port)

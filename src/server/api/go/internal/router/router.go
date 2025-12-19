@@ -17,16 +17,16 @@ import (
 )
 
 type RouterDeps struct {
-	Config                  *config.Config
-	DB                      *gorm.DB
-	Log                     *zap.Logger
-	SpaceHandler            *handler.SpaceHandler
-	BlockHandler            *handler.BlockHandler
-	SessionHandler          *handler.SessionHandler
-	DiskHandler             *handler.DiskHandler
-	ArtifactHandler         *handler.ArtifactHandler
-	TaskHandler             *handler.TaskHandler
-	ToolHandler             *handler.ToolHandler
+	Config          *config.Config
+	DB              *gorm.DB
+	Log             *zap.Logger
+	SpaceHandler    *handler.SpaceHandler
+	BlockHandler    *handler.BlockHandler
+	SessionHandler  *handler.SessionHandler
+	DiskHandler     *handler.DiskHandler
+	ArtifactHandler *handler.ArtifactHandler
+	TaskHandler     *handler.TaskHandler
+	ToolHandler     *handler.ToolHandler
 }
 
 func NewRouter(d RouterDeps) *gin.Engine {
