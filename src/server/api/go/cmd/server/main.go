@@ -90,7 +90,6 @@ func main() {
 	artifactHandler := do.MustInvoke[*handler.ArtifactHandler](inj)
 	taskHandler := do.MustInvoke[*handler.TaskHandler](inj)
 	toolHandler := do.MustInvoke[*handler.ToolHandler](inj)
-	messageObservingHandler := do.MustInvoke[*handler.MessageObservingHandler](inj)
 
 	engine := router.NewRouter(router.RouterDeps{
 		Config:                  cfg,
@@ -103,7 +102,6 @@ func main() {
 		ArtifactHandler:         artifactHandler,
 		TaskHandler:             taskHandler,
 		ToolHandler:             toolHandler,
-		MessageObservingHandler: messageObservingHandler,
 	})
 
 	addr := fmt.Sprintf("%s:%d", cfg.App.Host, cfg.App.Port)

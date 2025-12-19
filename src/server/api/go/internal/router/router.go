@@ -27,7 +27,6 @@ type RouterDeps struct {
 	ArtifactHandler         *handler.ArtifactHandler
 	TaskHandler             *handler.TaskHandler
 	ToolHandler             *handler.ToolHandler
-	MessageObservingHandler *handler.MessageObservingHandler
 }
 
 func NewRouter(d RouterDeps) *gin.Engine {
@@ -111,7 +110,7 @@ func NewRouter(d RouterDeps) *gin.Engine {
 
 			session.GET("/:session_id/token_counts", d.SessionHandler.GetTokenCounts)
 
-			session.GET("/:session_id/observing-status", d.MessageObservingHandler.GetSessionObservingStatus)
+			session.GET("/:session_id/observing-status", d.SessionHandler.GetSessionObservingStatus)
 
 			task := session.Group("/:session_id/task")
 			{
