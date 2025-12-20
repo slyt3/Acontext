@@ -1618,7 +1618,7 @@ paths:
             },
             { format: 'openai' }
           );
-  /session/{session_id}/observing-status:
+  /session/{session_id}/observing_status:
     get:
       consumes:
       - application/json

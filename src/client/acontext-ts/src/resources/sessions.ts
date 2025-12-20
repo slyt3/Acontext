@@ -278,7 +278,7 @@ export class SessionsAPI {
    *          pending counts and updated_at timestamp.
    */
   async messagesObservingStatus(sessionId: string): Promise<MessageObservingStatus> {
-    const data = await this.requester.request('GET', `/session/${sessionId}/observing-status`);
+    const data = await this.requester.request('GET', `/session/${sessionId}/observing_status`);
     return MessageObservingStatusSchema.parse(data);
   }
 }

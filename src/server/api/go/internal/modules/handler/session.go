@@ -684,7 +684,7 @@ func (h *SessionHandler) GetTokenCounts(c *gin.Context) {
 //	@Param			session_id	path	string	true	"Session ID"	format(uuid)
 //	@Security		BearerAuth
 //	@Success		200	{object}	serializer.Response{data=model.MessageObservingStatus}
-//	@Router			/session/{session_id}/observing-status [get]
+//	@Router			/session/{session_id}/observing_status [get]
 func (h *SessionHandler) GetSessionObservingStatus(c *gin.Context) {
 	sessionID := c.Param("session_id")
 

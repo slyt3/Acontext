@@ -1245,7 +1245,7 @@ const docTemplate = `{
                 ]
             }
         },
-        "/session/{session_id}/observing-status": {
+        "/session/{session_id}/observing_status": {
             "get": {
                 "security": [
                     {

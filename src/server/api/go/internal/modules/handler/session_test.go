@@ -3577,7 +3577,7 @@ func TestSessionHandler_GetSessionObservingStatus_Success(t *testing.T) {
 	c.Params = gin.Params{
 		{Key: "session_id", Value: sessionID},
 	}
-	req, _ := http.NewRequest("GET", "/session/"+sessionID+"/observing-status", nil)
+	req, _ := http.NewRequest("GET", "/session/"+sessionID+"/observing_status", nil)
 	c.Request = req
 
 	handler.GetSessionObservingStatus(c)
@@ -3600,7 +3600,7 @@ func TestSessionHandler_GetSessionObservingStatus_EmptySessionID(t *testing.T) {
 	c.Params = gin.Params{
 		{Key: "session_id", Value: ""},
 	}
-	req, _ := http.NewRequest("GET", "/session//observing-status", nil)
+	req, _ := http.NewRequest("GET", "/session//observing_status", nil)
 	c.Request = req
 
 	handler.GetSessionObservingStatus(c)
@@ -3627,7 +3627,7 @@ func TestSessionHandler_GetSessionObservingStatus_ServiceError(t *testing.T) {
 	c.Params = gin.Params{
 		{Key: "session_id", Value: sessionID},
 	}
-	req, _ := http.NewRequest("GET", "/session/"+sessionID+"/observing-status", nil)
+	req, _ := http.NewRequest("GET", "/session/"+sessionID+"/observing_status", nil)
 	c.Request = req
 
 	handler.GetSessionObservingStatus(c)

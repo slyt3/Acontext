@@ -363,6 +363,6 @@ class SessionsAPI:
             pending counts and updated_at timestamp.
         """
         data = self._requester.request(
-            "GET", f"/session/{session_id}/observing-status"
+            "GET", f"/session/{session_id}/observing_status"
         )
         return MessageObservingStatus.model_validate(data)
